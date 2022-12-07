@@ -49,5 +49,5 @@ For example, in a compose file add:
 
 ```yaml
 environment:
-      ENV: dev
+    ENV: dev
 ```
