@@ -30,7 +30,7 @@ docker push davidetriso/nextjs:node-14.5
 
 ## How to use
 
-Mount your app code in the `/app` dir inside the container using bind mounts; exclude the `node_modules` and `.next` directories, because they will be recreated by the image in runtime.
+Mount your app code in the `/app` dir inside the container using bind mounts; exclude the `node_modules` and `.next` directories, because they will be populated by the image in runtime.
 
 For example, in a compose file add:
 
@@ -42,3 +42,12 @@ volumes:
     - /app/.next
 ```
 
+By default the image will start a production server.
+To start the application in dev mode, set the `ENV` var to `dev`.
+
+For example, in a compose file add:
+
+```yaml
+environment:
+      ENV: dev
+```
