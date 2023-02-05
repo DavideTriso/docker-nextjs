@@ -13,7 +13,7 @@ docker build -t davidetriso/nextjs:[tagname-dir_name] ./[tagname-dir_name]
 E.g.:
 
 ```
-docker build -t davidetriso/nextjs:node-14.5 ./node-14.5
+docker build -t davidetriso/nextjs:node-14.15 ./node-14.15
 ```
 
 ### Push image to Docker Hub
@@ -25,8 +25,12 @@ docker push davidetriso/nextjs:tagname
 E.g.:
 
 ```
-docker push davidetriso/nextjs:node-14.5
+docker push davidetriso/nextjs:node-14.15
 ```
+
+###  Build and push everything
+
+Execute the `./build-and-push.sh` script to build and push all images to Docker Hub at once.
 
 ## How to use
 
