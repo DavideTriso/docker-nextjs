@@ -8,7 +8,6 @@ Image to run NextJS apps in docker
 
 Checkout the repository and run the `make` command in the root directory.
 //TODO
-//todo
 
 ### Build the image:
 
