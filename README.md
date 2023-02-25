@@ -1,6 +1,6 @@
 # Docker NextJS
 
-Image to run NextJS apps in docker
+Image to run NextJS apps in docker.
 
 ## Quick reference
 
@@ -55,3 +55,7 @@ For example, in a compose file add:
 environment:
     ENV: dev
 ```
+
+## License
+
+Licensed under the terms of the [MIT](LICENSE) license.
