@@ -1,4 +1,4 @@
-FROM    node:14.15
+FROM    node:14.15-alpine
 
 ENV     ENV=$ENV
 
@@ -9,11 +9,8 @@ RUN     npm -g config set user root \
 
 WORKDIR /app
 
-            #remove package-lock.json to prevent the world from imploding
-ENTRYPOINT  if [ -f package-lock.json ]; then \
-                rm package-lock.json; \
-            fi \
-            && npm install \
+
+ENTRYPOINT  npm install \
             && if [ $ENV = "dev" ]; then \
                 npm run dev; \
             else \

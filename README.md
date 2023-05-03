@@ -34,7 +34,7 @@ Execute the `./build-and-push.sh` script to build and push all images to Docker 
 
 ## How to use
 
-Mount your app code in the `/app` dir inside the container using bind mounts; exclude the `node_modules` and `.next` directories, because they will be populated by the image in runtime.
+Mount your app code in the `/app` dir inside the container using bind mounts; the `node_modules` and `.next` directories can be excluded, because they will be populated by the image in runtime.
 
 For example, in a compose file add:
 

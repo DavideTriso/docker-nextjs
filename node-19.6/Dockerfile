@@ -1,4 +1,4 @@
-FROM    node:19.6
+FROM    node:19.6-alpine
 
 ENV     ENV=$ENV
 
@@ -8,11 +8,8 @@ RUN     npm install --location=global sharp \
 
 WORKDIR /app
 
-            #remove package-lock.json to prevent the world from imploding
-ENTRYPOINT  if [ -f package-lock.json ]; then \
-                rm package-lock.json; \
-            fi \
-            && npm install \
+
+ENTRYPOINT  npm install \
             && if [ $ENV = "dev" ]; then \
                 npm run dev; \
             else \
