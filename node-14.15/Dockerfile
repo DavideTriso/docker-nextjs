@@ -1,9 +1,14 @@
 FROM    node:14.15-alpine
 
 ENV     ENV=$ENV
+ENV     TZ=UTC
 
 USER    root
-RUN     npm -g config set user root \
+
+RUN     apk update --no-cache \
+        && apk add --update --no-cache \
+            tzdata \ 
+        && npm -g config set user root \
         && npm install -g sharp \
         && mkdir -p /app
 
