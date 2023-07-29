@@ -1,14 +1,9 @@
-FROM    node:17.9-alpine
+FROM    node:19.6-alpine
 
 ENV     ENV=$ENV
-ENV     TZ=UTC
 
 USER    root
-
-RUN     apk update --no-cache \
-        && apk add --update --no-cache \
-            tzdata \ 
-        && npm install --location=global sharp \
+RUN     npm install --location=global sharp \
         && mkdir -p /app
 
 WORKDIR /app

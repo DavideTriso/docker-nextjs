@@ -1,17 +1,14 @@
-FROM    node:18.14-alpine
+FROM    node:14-alpine
 
 ENV     ENV=$ENV
-ENV     TZ=UTC
 
 USER    root
-
-RUN     apk update --no-cache \
-        && apk add --update --no-cache \
-            tzdata \
-        && npm install --location=global sharp \
+RUN     npm -g config set user root \
+        && npm install -g sharp \
         && mkdir -p /app
 
 WORKDIR /app
+
 
 ENTRYPOINT  npm install \
             && if [ $ENV = "dev" ]; then \
