@@ -56,6 +56,8 @@ environment:
     ENV: dev
 ```
 
+> NOTE: When the container is launched, and no `package.json` file is found in the `/app` directory, the entrypoint script will trigger the creation of a new Next.js application with default configurations (applicable for images running Node versions >= 18.18).
+
 ## License
 
 Licensed under the terms of the [MIT](LICENSE) license.
