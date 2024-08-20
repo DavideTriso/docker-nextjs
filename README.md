@@ -7,13 +7,14 @@ Image to run NextJS apps in docker.
 ### Build the image:
 
 ```
-docker build -t davidetriso/nextjs:[tagname-dir_name] ./[tagname-dir_name]
+docker buildx build --tag davidetriso/nextjs[tagname-dir_name] -o type=image --platform=linux/arm64,linux/amd64 ./[tagname-dir_name]
 ```
 
 E.g.:
 
 ```
 docker build -t davidetriso/nextjs:node-14.15 ./node-14.15
+docker buildx build --tag davidetriso/nextjs:node-14.15 -o type=image --platform=linux/arm64,linux/amd64 ./node-14.15
 ```
 
 ### Push image to Docker Hub
