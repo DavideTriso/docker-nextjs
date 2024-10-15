@@ -1,6 +1,6 @@
 FROM    node:18.18-alpine
 
-ENV     ENV=$ENV
+ENV     ENV=prod
 ENV     TZ=UTC
 
 USER    root

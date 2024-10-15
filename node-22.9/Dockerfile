@@ -1,4 +1,4 @@
-FROM    node:20.7-alpine
+FROM    node:22.9-alpine
 
 ENV     ENV=prod
 ENV     TZ=UTC

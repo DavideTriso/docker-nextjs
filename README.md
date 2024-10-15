@@ -13,7 +13,6 @@ docker buildx build --tag davidetriso/nextjs[tagname-dir_name] -o type=image --p
 E.g.:
 
 ```
-docker build -t davidetriso/nextjs:node-14.15 ./node-14.15
 docker buildx build --tag davidetriso/nextjs:node-14.15 -o type=image --platform=linux/arm64,linux/amd64 ./node-14.15
 ```
 
